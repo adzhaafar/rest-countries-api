@@ -15,6 +15,7 @@ body {
   background-color: white;
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
 }
 
 .main-title {
@@ -30,5 +31,53 @@ body {
 
 .light-moon {
   margin-right: 0.4em;
+}
+
+.flex-second-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16.7vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input {
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #858585;
+}
+
+.input-country {
+  margin-left: 4.15625em;
+  padding: 1.375em 14.5em 1.375em 4.15625em;
+  font-weight: 300;
+}
+
+.dropdown {
+  margin-top: 14em;
+  padding: 1.625em 5em 1.625em 1.625em;
+  margin-left: auto;
+  margin-right: 4.15625em;
+  background-color: white;
+  font-weight: 700;
+}
+
+.down-icon {
+  position: absolute;
+  right: 100px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 75px;
+}
+
+.dropdown-content {
+  color: #858585;
+  font-size: 0.9rem;
 }
 /*# sourceMappingURL=style.css.map */

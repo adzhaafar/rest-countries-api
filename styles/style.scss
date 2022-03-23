@@ -1,5 +1,5 @@
 // - Mobile: 375px
-// - Desktop: 1440px
+// - Desktop: 1440px by 1024px
 
 // colours
 $darkBlue: hsl(209, 23%, 22%); //dark mode elements
@@ -31,12 +31,15 @@ body {
   height: 11.15vh; //set height of header
   background-color: $white;
   position: sticky; //stays after scrolling
+  top: 0; //sticks to top of page
 }
 
 .main-title {
   margin-left: 4.375em;
   font-weight: $bold;
 }
+
+//dark mode
 .dark-mode {
   margin-left: auto; //push it to the other side
   margin-right: 4.375em;
@@ -45,4 +48,51 @@ body {
 
 .light-moon {
   margin-right: 0.4em;
+}
+
+//second flex container
+.flex-second-container {
+  display: flex;
+  height: 16.7vh;
+  align-items: center;
+}
+
+//two inputs
+.input {
+  background-color: $white;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: $darkGrey;
+}
+// input bar for the country
+.input-country {
+  margin-left: 4.15625em;
+  padding: 1.375em 14.5em 1.375em 4.15625em; //gives shape
+  font-weight: $light;
+}
+
+.dropdown {
+  margin-top: 14em;
+  padding: 1.625em 5em 1.625em 1.625em; //gives shape
+  margin-left: auto; //pushes to the end
+  margin-right: 4.15625em;
+  background-color: $white;
+  font-weight: $medium;
+}
+
+.down-icon {
+  position: absolute;
+  right: 100px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 75px;
+}
+
+.dropdown-content {
+  // display: none;
+  color: $darkGrey;
+  font-size: 0.9rem;
 }

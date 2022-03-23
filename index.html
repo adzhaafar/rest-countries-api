@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REST Countries API</title>
+    <!-- favicons -->
+    
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,32 +18,50 @@
     <!-- header of website -->
     <header class="header">
         <h3 class="main-title">Where in the world?</h3>
-        <!-- icon (half moon) -->
         <h5 class="dark-mode">
             <!-- icon (half moon) -->
             <ion-icon class="light-moon" name="moon-outline"></ion-icon>
             Dark mode
         </h5>
     </header>
-<!-- 
-    Search country input field 
-    <input placeholder="Search for a country" type="text">
-     drop down list 
-    <button></button> -->
+    <!-- main body of website -->
+    <main>
+        <div class="flex-second-container">
+            <!-- Search country input field  -->
+            <ion-icon class="icon search-icon" name="search-outline"></ion-icon> 
+            <input class="input input-country" placeholder="Search for a country..." type="text"> 
 
-    <!-- main body of page with all country divs -->
-    <div class="main-container">
-        <!-- each countries individual div -->
-        <div class="country-div"> 
-            <div class="flag"></div>
-            <h5 class="country-name"></h5>
-            <div class="information">
-                <p class="population"></p>
-                <p class="region"></p>
-                <p class="capital"></p>
+             <!-- drop down list  -->
+             <div class="dropdown">
+                <ion-icon  class="icon" id="down-icon" name="chevron-down-outline"></ion-icon> 
+                <button class="input filter-region">Filter by Region</button>
+                <div class="dropdown-content">
+                    <p>Africa</p>
+                    <p>America</p>
+                    <p>Asia</p>
+                    <p>Europe</p>
+                    <p>Oceania</p>
+                </div>
+              </div>
+
+        </div>
+
+        <!-- main body of page with all country divs -->
+        <div class="main-container">
+            <!-- each countries individual div -->
+            <div class="country-div"> 
+                <div class="flag"></div>
+                <h5 class="country-name"></h5>
+                <div class="information">
+                    <p class="population"></p>
+                    <p class="region"></p>
+                    <p class="capital"></p>
+                </div>
             </div>
         </div>
-    </div>
+        
+    </main> 
+
     <!-- icons -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -49,3 +69,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+
