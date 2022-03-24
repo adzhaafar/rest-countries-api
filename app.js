@@ -1,4 +1,3 @@
-
 //selectors
 const gridContainer = document.querySelector('.grid-container')
 
@@ -22,5 +21,4 @@ async function countryData() {
 }
 
 countryData();
-
 
