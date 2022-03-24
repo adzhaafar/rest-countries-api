@@ -28,13 +28,13 @@
     <main>
         <div class="flex-second-container">
             <!-- Search country input field  -->
-            <ion-icon class="icon search-icon" name="search-outline"></ion-icon> 
-            <input class="input input-country" placeholder="Search for a country..." type="text"> 
+            <ion-icon class="search-icon" name="search-outline"></ion-icon> 
+            <input class="input-country" placeholder="Search for a country..." type="text"> 
 
              <!-- drop down list  -->
              <div class="dropdown">
-                <ion-icon  class="icon" id="down-icon" name="chevron-down-outline"></ion-icon> 
-                <button class="input filter-region">Filter by Region</button>
+                <ion-icon  class="down-icon" name="chevron-down-outline"></ion-icon> 
+                <button class="dropbtn" id="filter-by-region">Filter by Region</button>
                 <div class="dropdown-content">
                     <p>Africa</p>
                     <p>America</p>
@@ -47,19 +47,8 @@
         </div>
 
         <!-- main body of page with all country divs -->
-        <div class="main-container">
-            <!-- each countries individual div -->
-            <div class="country-div"> 
-                <div class="flag"></div>
-                <h5 class="country-name"></h5>
-                <div class="information">
-                    <p class="population"></p>
-                    <p class="region"></p>
-                    <p class="capital"></p>
-                </div>
-            </div>
-        </div>
-        
+        <div class="grid-container"></div>
+           
     </main> 
 
     <!-- icons -->
