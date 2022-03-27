@@ -1,10 +1,12 @@
 @import "style";
 
 .main-flex-container {
+  flex-wrap: wrap;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 100px;
+  margin-top: 70px;
   height: 50vh;
 }
 
@@ -25,9 +27,14 @@
   font-size: 1.5rem;
 }
 
+//change position of border-countries
 .border-countries {
+  margin-top: 0;
+  height: 20vh;
+  align-items: flex-start;
   gap: 10px;
   justify-content: flex-end;
+  width: 50%;
 }
 
 .second-row > p,

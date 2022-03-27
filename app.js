@@ -24,18 +24,33 @@ window.addEventListener('load', (event) => {
     
         
     };
+    //gets specific info for country that is clicked
+    async function extraInfo(country) {
+        const response2 = await fetch(`https://restcountries.com/v2/name/${country}`);
+        const data2 = await response2.json();
+        console.log(country);
+        console.log(data2[0].name);
+    };
 
     // waits for all grid items to load, adds event listener to all divs
     const waitFunc = async () => {
         const result = await countryData()
         const gridItems = [...document.querySelectorAll(".grid-item")];
         gridItems.map((country) => {
+            // console.log(country.children[1].innerText)
             country.addEventListener('click', () => {
+                let countryName = country.children[1].innerText
                 window.location.href = "country.html";
+                extraInfo(countryName);
             })
-    });
+        });
     };
+
     waitFunc();
 
 });
 
+
+
+
+    
