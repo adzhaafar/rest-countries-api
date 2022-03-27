@@ -1,0 +1,36 @@
+@import "style";
+
+.main-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  height: 50vh;
+}
+
+.flag-big {
+  height: 400px;
+  width: 560px;
+  background-color: grey;
+}
+
+.border-countries {
+  display: flex;
+  margin-top: 100px;
+}
+
+.country {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.border-countries {
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.second-row > p,
+.third-row > p {
+  margin-block: 0.7rem;
+}
