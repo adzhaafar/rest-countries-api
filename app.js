@@ -1,22 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    //selectors
-    const gridContainer = document.querySelector('.grid-container');
-    const gridItems = [...document.querySelectorAll(".grid-item")];
+
+
+window.addEventListener('load', (event) => {
     
-    const extraInfoPage = () => {
-        console.log('hello world');
-        // window.open("", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=200,top=" + (screen.height - 400) + ",left=" + (screen.width - 840));
-        // win.document.body.innerHTML = "<h1>Hello world</h1>";
-        // newWindow.document.write("<h1>Hello world</h1>")
-    };
+    const gridContainer = document.querySelector('.grid-container');
 
-
-
-    gridItems.forEach((gridItem) => {
-        grid.addEventListener('click', extraInfoPage);
-    });
-
-
+    //calls api to render country divs
     async function countryData() {
         const response = await fetch('https://restcountries.com/v2/all');
         const data = await response.json();
@@ -33,10 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="capital"><b>Capital:</b> ${data[country].capital}</p>
             </div>`
         };
-    };
     
-    countryData();
+        
+    };
+
+    // waits for all grid items to load, adds event listener to all divs
+    const waitFunc = async () => {
+        const result = await countryData()
+        const gridItems = [...document.querySelectorAll(".grid-item")];
+        gridItems.map((country) => {
+            country.addEventListener('click', () => {
+                window.location.href = "country.html";
+            })
+    });
+    };
+    waitFunc();
+
 });
-
-
 
