@@ -1,5 +1,3 @@
-
-
 window.addEventListener('load', (event) => {
     
     const gridContainer = document.querySelector('.grid-container');
@@ -21,14 +19,12 @@ window.addEventListener('load', (event) => {
                     <p class="capital"><b>Capital:</b> ${data[country].capital}</p>
             </div>`
         };
-    
-        
     };
     //gets specific info for country that is clicked
     async function extraInfo(country) {
         const response2 = await fetch(`https://restcountries.com/v2/name/${country}`);
         const data2 = await response2.json();
-        console.log(country);
+        console.log(data2);
         console.log(data2[0].name);
     };
 
@@ -45,12 +41,6 @@ window.addEventListener('load', (event) => {
             })
         });
     };
-
+    countryData();
     waitFunc();
-
 });
-
-
-
-
-    
