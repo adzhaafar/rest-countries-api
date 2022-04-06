@@ -123,20 +123,6 @@ select {
   display: block;
 }
 
-/* .flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
-}
-
-.flow--space-small {
-  --flow-space: 0.75rem;
-}
-
-.container {
-  padding-inline: 2em;
-  margin-inline: auto;
-  max-width: 80rem;
-} */
-
 /* colours */
 
 .background-dark {
@@ -204,14 +190,3 @@ select {
 /* interactive elements */
 
 /* set up the body */
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.fs-900,
-.fs-800,
-.fs-700,
-.fs-600 {
-  line-height: 1.1;
-}
