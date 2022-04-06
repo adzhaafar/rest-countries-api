@@ -1,8 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import Navbar from "./Components/Navbar.js" 
+
+
 
 export default function App() {
   return (
-    <h1>Hello World!</h1>
+    < Navbar /> 
   )
 }
