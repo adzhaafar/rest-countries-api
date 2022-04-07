@@ -1,11 +1,13 @@
 @import "../../index.css";
 
 .navbar {
+  /* vertical and horizontal center */
   justify-content: center;
   align-items: center;
+  /* set height */
   height: 80px;
-  background-color: white;
-  gap: calc(70%);
+  /* pull them apart */
+  gap: 70%;
 }
 
 /* fix text sliding off sides on small screen */
