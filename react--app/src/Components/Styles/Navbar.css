@@ -1,1 +1,11 @@
 @import "../../index.css";
+
+.navbar {
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: white;
+  gap: calc(70%);
+}
+
+/* fix text sliding off sides on small screen */

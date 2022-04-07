@@ -23,6 +23,9 @@
   --fw-light: 300;
   --fw-medium: 600;
   --fw-dark: 800;
+
+  /* spacing */
+  --gap-space: 0.5em;
 }
 
 /* ------------------*/
@@ -123,6 +126,12 @@ select {
   display: block;
 }
 
+.center {
+  justify-content: center;
+  align-items: center;
+  /* vertical-align: middle; */
+}
+
 /* colours */
 
 .background-dark {
@@ -171,8 +180,8 @@ select {
   font-size: var(--fs-medium);
 }
 
-.fs-large {
-  font-size: var(--fs-large);
+.fs-small {
+  font-size: var(--fs-small);
 }
 
 .fw-dark {
@@ -181,8 +190,59 @@ select {
 .fw-medium {
   font-weight: var(--fw-medium);
 }
-.fw-dark {
+.fw-light {
   font-weight: var(--fw-light);
 }
 
 /* components, interactive elements, set up body */
+body {
+  background-color: hsl(var(--clr-lm-background));
+}
+
+.space-small {
+  gap: var(--gap-space);
+}
+
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+.space-around-content {
+  margin: 1rem;
+}
+
+.inline {
+  display: inline;
+}
+
+.box-shadow {
+  box-shadow: 0 0 8px 4px rgb(224, 217, 217);
+}
+
+.no-border {
+  border: none;
+  outline: none;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}
+
+.padding-around {
+  padding: 1rem;
+}
+.end {
+  margin-left: auto;
+}

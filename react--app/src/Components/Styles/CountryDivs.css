@@ -1,1 +1,49 @@
 @import "../../index.css";
+
+/* .grid-container {
+    width: 99%;
+    display: inline-grid;
+    gap: 75px;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+  
+  .grid-item {
+    box-shadow: 0 0 8px 4px rgb(224, 217, 217); //box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
+    width: 265px;
+    height: 340px;
+    background-color: $white;
+    border-radius: 5px;
+  }
+  
+  .grid-item:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  
+  .flag {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px 5px 0px 0px; // top-left corner, top-right corner, bottom-right corner, bottom-left corner
+  }
+  
+  .country {
+    font-size: 1.2rem;
+    font-weight: $bold;
+    margin-left: 25px;
+  }
+  
+  .extra-info p {
+    margin-left: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 0;
+  } */
+
+.grid-container {
+  display: inline-grid;
+  width: 99%;
+  gap: 75px;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+}
