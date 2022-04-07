@@ -2,6 +2,7 @@
 
 .navbar {
   /* vertical and horizontal center */
+  box-shadow: 0 2px 4px 0 rgb(224, 217, 217);
   justify-content: center;
   align-items: center;
   /* set height */
@@ -11,3 +12,4 @@
 }
 
 /* fix text sliding off sides on small screen */
+/* rgb(224, 217, 217) */

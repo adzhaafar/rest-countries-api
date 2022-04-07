@@ -3,12 +3,10 @@
 /* set up container */
 .grid-container {
   margin-top: 50px;
+  width: 99%;
   display: inline-grid;
-  /* need with for justify content to work */
-  width: 99.99%;
-  /* 4 columns of equal size */
-  grid-template-columns: repeat(4, auto);
   gap: 75px;
+  grid-template-columns: auto auto auto auto;
   justify-content: center;
 }
 
