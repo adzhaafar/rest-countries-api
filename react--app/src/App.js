@@ -75,13 +75,17 @@ export default function App() {
 
 
   function trueToFalse() {
-    setIsClicked(prevIsClicked => !prevIsClicked)
+    setIsClicked(false)
   }
   
+  function falseToTrue() {
+    setIsClicked(true)
+  }
+
   return (
     <div>
       < Navbar /> 
-      < SearchAndFilter handleClick={trueToFalse} changeRegion={setRegion} changeData={setInputData} value={inputData} />
+      < SearchAndFilter handleClick2={falseToTrue} handleClick={trueToFalse} changeRegion={setRegion} changeData={setInputData} value={inputData} />
       <section className="grid-container">
         {isClicked ? countries : countriesByRegion} 
       </section>

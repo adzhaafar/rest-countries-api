@@ -21,7 +21,7 @@ export default function SearchAndFilter(props) {
         <div className="flex search-filter-container">    
             <div className="input white-background border-radius box-shadow no-border fw-light text-input-light cursor-pointer padding-around">
                 <ion-icon name="search-outline"></ion-icon>
-                <input onClick={props.handleClick} onChange={handleChange} className="no-border" placeholder="Search for a country..." type="text"></input>
+                <input onClick={props.handleClick2} onChange={handleChange} className="no-border" placeholder="Search for a country..." type="text"></input>
             </div>
             <div className="dropdown">
                 <button className="padding-around white-background text-light no-border box-shadow border-radius cursor-pointer"><ion-icon className="" name="chevron-down-outline"></ion-icon> Filter by Region</button>
