@@ -30,6 +30,10 @@
   display: block;
 }
 
+.drop-items:hover {
+  display: block;
+}
+
 /* change background color on hover of item */
 .drop-items p:hover {
   background-color: #f1f1f1;

@@ -11,6 +11,13 @@ export default function App() {
   // state of input value of search input
   const [inputData, setInputData] = React.useState('');
 
+  // state of the region chosen by user
+  const [region, setRegion] = React.useState('');
+
+  // sets state of input field being cliked vs dropdown items to use the right feature
+  const [isClicked, setIsClicked] = React.useState(false);
+
+  // const isClicked = false;
 
   // get data from api
   React.useEffect(() => {
@@ -20,15 +27,14 @@ export default function App() {
   }, [])
 
   // remember to clean up side effect
-
+  console.log(isClicked)
 
   // only render out country divs that's name includes what user typed in (inputData), on blank inputData render out all country divs (result contains only those country divs that need to be rendered)
   const result = countryData.filter(country => {
-    if(inputData === "") {
+    if (inputData === "") {
     return country
-  }
-    else if (country.name.toLowerCase().includes(inputData.toLowerCase())) {
-    return country
+    } else if (country.name.toLowerCase().includes(inputData.toLowerCase())) {
+      return country
   }
 })
   // result countries rendering, passing props to CountryDivs component
@@ -43,15 +49,41 @@ export default function App() {
         capital={country.capital} />
     )
   }) 
+  
+
+  const resultRegion = countryData.filter(country => {
+    if (region === "") {
+    return country
+  }
+    else if (country.region === region) {
+    return country
+  }
+  })
+  
+  // result countries rendering, passing props to CountryDivs component
+  const countriesByRegion = resultRegion.map(country => {
+    return (
+      <CountryDivs
+        key={country.name}
+        flag={country.flags.png}
+        name={country.name}
+        population={country.population}
+        region={country.region}
+        capital={country.capital} />
+    )
+  }) 
 
 
-
+  function trueToFalse() {
+    setIsClicked(prevIsClicked => !prevIsClicked)
+  }
+  
   return (
     <div>
       < Navbar /> 
-      < SearchAndFilter changeData={setInputData} value={inputData} />
+      < SearchAndFilter handleClick={trueToFalse} changeRegion={setRegion} changeData={setInputData} value={inputData} />
       <section className="grid-container">
-        {countries}
+        {isClicked ? countries : countriesByRegion} 
       </section>
     </div>    
   )
