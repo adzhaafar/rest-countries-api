@@ -3,20 +3,36 @@ import Navbar from "./Components/Navbar"
 import SearchAndFilter from "./Components/SearchAndFilter";
 import CountryDivs from "./Components/CountryDivs";
 
-
-
 export default function App() {
 
+  // state of api response
   const [countryData, setCountryData] = React.useState([]);
 
+  // state of input value of search input
+  const [inputData, setInputData] = React.useState('');
 
+
+  // get data from api
   React.useEffect(() => {
     fetch("https://restcountries.com/v2/all")
-    .then(res => res.json())
-    .then(data => setCountryData(data))
+      .then(res => res.json())
+      .then(data => setCountryData(data))
   }, [])
 
-  const countries = countryData.map(country => {
+  // remember to clean up side effect
+
+
+  // only render out country divs that's name includes what user typed in (inputData), on blank inputData render out all country divs (result contains only those country divs that need to be rendered)
+  const result = countryData.filter(country => {
+    if(inputData === "") {
+    return country
+  }
+    else if (country.name.toLowerCase().includes(inputData.toLowerCase())) {
+    return country
+  }
+})
+  // result countries rendering, passing props to CountryDivs component
+  const countries = result.map(country => {
     return (
       <CountryDivs
         key={country.name}
@@ -26,15 +42,16 @@ export default function App() {
         region={country.region}
         capital={country.capital} />
     )
-  })
+  }) 
+
 
 
   return (
     <div>
       < Navbar /> 
-      < SearchAndFilter />
+      < SearchAndFilter changeData={setInputData} value={inputData} />
       <section className="grid-container">
-        { countries}
+        {countries}
       </section>
     </div>    
   )
