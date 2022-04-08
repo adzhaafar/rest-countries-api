@@ -5,13 +5,8 @@ import Home from "./Pages/Home";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Routes
 } from "react-router-dom";
-
-// <Link to="/country-info"><Link>
-//basename, switch
-
 
 export default function App() {
 

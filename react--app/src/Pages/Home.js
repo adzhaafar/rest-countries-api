@@ -5,13 +5,10 @@ import CountryDivs from "../Components/CountryDivs";
 export default function Home() {
     // state of api response
     const [countryData, setCountryData] = React.useState([]);
-
     // state of input value of search input
     const [inputData, setInputData] = React.useState('');
-
     // state of the region chosen by user
     const [region, setRegion] = React.useState('');
-
     // sets state of input field being cliked vs dropdown items to use the right feature
     const [isClicked, setIsClicked] = React.useState(false);
 
@@ -46,7 +43,7 @@ export default function Home() {
         )
     })
   
-
+    // array of all countries based on regions filter
     const resultRegion = countryData.filter(country => {
         if (region === "") {
             return country
@@ -87,6 +84,3 @@ export default function Home() {
         </div>
     )
 }
-
-
-
