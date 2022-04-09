@@ -4,8 +4,15 @@ import CountryInfo from "./Pages/CountryInfo";
 import Home from "./Pages/Home";
 import {
   BrowserRouter as Router,
+  Routes,
   Route,
-  Routes
+  Navigate,
+  Link,
+  Outlet,
+  useParams,
+  NavLink,
+  useNavigate,
+  useLocation,
 } from "react-router-dom";
 
 export default function App() {
@@ -15,9 +22,11 @@ export default function App() {
       < Navbar /> 
       <Routes>
         <Route path='/' exact element={<Home/>}/>
-        <Route path='/country-info' exact element={<CountryInfo/>}/>
+        <Route path=':countryName' exact element={<CountryInfo />} />
       </Routes>
+        <Outlet />
   </Router>  
   )
 }
+
 

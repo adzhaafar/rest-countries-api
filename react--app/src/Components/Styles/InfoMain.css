@@ -1,0 +1,44 @@
+@import "../../index.css";
+
+.main-container {
+  margin-top: 10em;
+  gap: 100px;
+}
+
+.flag-big {
+  /* background-color: red; */
+  width: 490px;
+  height: 350px;
+}
+
+.info-rows {
+  margin-left: 25px;
+  gap: 50px;
+}
+
+.border-container {
+  margin-top: 70px;
+}
+
+.shift-down {
+  margin-top: 15px;
+}
+
+.padding-inline {
+  padding-inline: 1em;
+}
+
+.country-name {
+  font-size: 2rem;
+  line-height: 2.5em;
+  margin-left: 75px;
+}
+
+.border-button {
+  transition: ease-in-out 0.5s;
+}
+
+.border-button:hover {
+  transform: scale(1.1);
+  transition: transform ease-in-out 0.5s;
+}

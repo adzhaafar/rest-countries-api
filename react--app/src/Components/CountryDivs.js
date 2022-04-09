@@ -1,12 +1,12 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 
 import "./Styles/CountryDivs.css"
 
 export default function CountryDivs(props) {
 
     return (
-        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/country-info">
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to={`/${props.name}`}>
             <div className="white-background border-radius box-shadow grid-item">
                 <img className="flag" src={props.flag} alt="flag"></img>
                     <p className="country-name line-space-big fs-large fw-dark letter-spacing">{props.name}</p>
@@ -20,4 +20,3 @@ export default function CountryDivs(props) {
                 
 )
 }
-
