@@ -20,7 +20,7 @@ export default function Home() {
             .then(data => setCountryData(data))
     }, [])
 
-    // remember to clean up side effect
+
 
     // only render out country divs that's name includes what user typed in (inputData), on blank inputData render out all country divs (result contains only those country divs that need to be rendered)
     const result = countryData.filter(country => {

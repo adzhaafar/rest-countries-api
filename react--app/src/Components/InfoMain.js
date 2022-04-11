@@ -1,44 +1,56 @@
 import React from "react";
 
 import "./Styles/InfoMain.css";
-// const axios = require('axios');
-import axios from "axios"
+
 
 export default function InfoMain(props) {
-    // console.log(props.name)
-    const [data, setData] = React.useState({})
+    const [dataCountry, setDataCountry] = React.useState({})
     // const [borderCountries, setBorderCountries] = React.useState({})
     
-    React.useEffect(() => {
-        const api = axios.create({
-            baseURL: `https://restcountries.com/v3.1/name/${props.name}`
-        })
-        api.get('/').then(res => {
-            console.log(res.data[Object.keys(res.data)[0]])
-            
-        })
-    }, [])
-    // console.log(data)
+    // console.log('page rendered')
 
+    // if (Object.keys(dataCountry).length === 0) {
+    //     console.log("no data")
+    // } else {
+    //     console.log(dataCountry)
+    // }
+
+    // get data from api
+    React.useEffect(() => {
+        console.log('get data')
+        fetch(`https://restcountries.com/v2/name/${props.name}`)
+            .then(res => res.json())
+            .then(data => setDataCountry(data[0]))
+    }, [])
 
     return (
+       
+
+            
+            
+        
+
         <div className="main-container center flex">
-            <img className=" border-radius flag-big" src="data.flags.png" alt="flag"></img>
+            <p>{JSON.stringify(dataCountry)}</p>
+            {/* <img className=" border-radius flag-big" src={dataCountry.flags.png} alt="flag"></img> */}
             <div>
-                <h3 className="country-name fw-dark letter-spacing">{data.name.common}</h3>
+                <h3 className="country-name fw-dark letter-spacing">{props.name}</h3>
                 <div className="info-rows flex">
                     <div>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Native Name:</span> {data.name.nativeName.sqi.common}</p>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Population:</span> {data.population}</p>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Region:</span>{ data.region}</p>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Sub Region:</span> { data.subregions}</p>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Capital:</span> {data.capital}</p>
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Native Name:</span> {props.name}</p>
+                        {/* here figure out how to get the lowecase 3 letter code  dataCountry.name.nativeName.sqi.common  iso639_2*/}
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Population:  </span> {dataCountry.population}</p>
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Region:  </span>{ dataCountry.region}</p>
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Sub Region:  </span> {dataCountry.subregion}</p>
+                        {/* here check subregion or subregions */}
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Capital:  </span> {dataCountry.capital}</p>
                     </div>
 
                     <div>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Top Level Domain:</span> { data.tld}</p>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Currencies:</span> { data.currencies.name}</p>
-                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Languages:</span>{ data.languages.sqi}</p>
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Top Level Domain:  </span> {dataCountry.tld}</p>
+                        {/* here it uses the code */}
+                        <p className="fs-small fw-light"><span className="fs-medium fw-dark">Currencies:</span> { dataCountry.currencies.name}</p>
+                        {/* <p className="fs-small fw-light"><span className="fs-medium fw-dark">Languages:</span>{ Object.entries(dataCountry.languages)}</p> */}
                     </div>
                 </div>
 
@@ -53,4 +65,6 @@ export default function InfoMain(props) {
         </div>
     )
 }
+
+
 
