@@ -11,6 +11,10 @@
   align-items: flex-start;
 }
 
+.body {
+  -webkit-appearance: none;
+}
+
 /* make input div longer */
 .input {
   padding-inline-end: 5em;
@@ -36,3 +40,8 @@
 }
 
 /* fix icons, fix hovering, fix box size*/
+.remove-border {
+  border-color: transparent;
+  padding: 0;
+  border-image-width: 0;
+}

@@ -5,7 +5,7 @@ import "../darkmode.js"
 
 export default function Navbar() {
     return (
-        <nav className="flex white-background navbar">
+        <nav className="text-color flex elements-color navbar">
             <h3 className="fs-large text-no-wrap">Where in the world?</h3>
             <div className="dark-mode-toggle flex space-small center">
                 <ion-icon name="moon-outline"></ion-icon>

@@ -4,12 +4,10 @@
 
 :root {
   /* colors */
-  --clr-dm-elements: 209 23% 22%;
-  --clr-dm-background: 207 26% 17%;
-  --clr-lm-text: 200 15% 8%;
-  --clr-lm-input: 0 0% 52%;
-  --clr-lm-background: 0 0% 98%;
-  --clr-lm-dm-elements: 0 0% 100%;
+  --clr-background: 0 0% 98%;
+  --clr-elements: 0 0% 100%;
+  --clr-text: 200 15% 8%;
+  --clr-input: 0 0% 52%;
 
   /* font-sizes */
   --fs-large: 1.2rem;
@@ -28,11 +26,12 @@
   --gap-space: 0.5em;
 }
 
-/* .darkmode {
-  --clr-elements: 209 23% 22%;
+.darkmode {
   --clr-background: 207 26% 17%;
-  --clr-lm-dm-elements: 0 0% 100%;
-} */
+  --clr-elements: 209 23% 22%;
+  --clr-text: 0 0% 100%;
+  --clr-input: 0 0% 100%;
+}
 
 /* ------------------*/
 /*       Resets      */
@@ -92,7 +91,6 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
 button,
 textarea,
 select {
@@ -139,32 +137,20 @@ select {
 
 /* colours */
 
-.background-dark {
-  background-color: hsl(var(--clr-dm-background));
+.background-color {
+  background-color: hsl(var(--clr-background));
 }
 
-.background-light {
-  background-color: hsl(var(--clr-lm-background));
+.text-color {
+  color: hsl(var(--clr-text));
 }
 
-.text-light {
-  color: hsl(var(--clr-lm-text));
+.input-color {
+  color: hsl(var(--clr-input));
 }
 
-.text-dark {
-  color: hsl(var(--clr-lm-dm-elements));
-}
-
-.text-input-light {
-  color: hsl(var(--clr-lm-input));
-}
-
-.elements-dark {
-  background-color: hsl(var(--clr-dm-elements));
-}
-
-.white-background {
-  background-color: hsl(var(--clr-lm-dm-elements));
+.elements-color {
+  background-color: hsl(var(--clr-elements));
 }
 
 /* typography */
@@ -201,7 +187,7 @@ select {
 
 /* components, interactive elements, set up body */
 body {
-  background-color: hsl(var(--clr-lm-background));
+  background-color: hsl(var(--clr-background));
   font-family: var(--ff-nunito);
 }
 
@@ -222,7 +208,7 @@ body {
 }
 
 .box-shadow {
-  box-shadow: 0 0 8px 4px rgb(224, 217, 217);
+  box-shadow: 0 0 15px 2px hsl(var(--clr-input));
 }
 
 .no-border {
@@ -261,14 +247,10 @@ body {
   line-height: 3;
 }
 
-/* #darkmode {
-  background-color: hsl(var(--clr-dm-background));
-  
-
-  background-color: hsl(var(--clr-dm-elements));
-
-} */
-
 .dark-mode-toggle:hover {
   text-decoration: underline;
+}
+::placeholder {
+  background-color: hsl(var(--clr-elements));
+  color: hsl(var(--clr-input));
 }

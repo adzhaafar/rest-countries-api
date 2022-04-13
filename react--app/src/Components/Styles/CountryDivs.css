@@ -12,6 +12,7 @@
 
 /* set height and width on grid items */
 .grid-item {
+  overflow: scroll;
   width: 265px;
   height: 340px;
   /* to make smooth transition out of hover */
