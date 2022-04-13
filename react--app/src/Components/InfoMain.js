@@ -42,7 +42,7 @@ export default function InfoMain(props) {
 
     return (
         <>
-            <button onClick={() => navigate('/')}>Home</button>
+            <button className="home-button no-border padding-inline cursor-pointer border-radius box-shadow space-around-content elements-color input-color fs-small fw-medium letter-spacing" onClick={() => navigate('/')}>Home</button>
             <div className="text-color main-container center flex">
                 <img className="box-shadow border-radius flag-big" src={dataCountry && dataCountry.flags ? dataCountry.flags.png : null} alt="flag"></img>
                 <div>

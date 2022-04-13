@@ -8,6 +8,7 @@
   --clr-elements: 0 0% 100%;
   --clr-text: 200 15% 8%;
   --clr-input: 0 0% 52%;
+  --clr-box-shadow: 0 0% 52%;
 
   /* font-sizes */
   --fs-large: 1.2rem;
@@ -31,6 +32,7 @@
   --clr-elements: 209 23% 22%;
   --clr-text: 0 0% 100%;
   --clr-input: 0 0% 100%;
+  --clr-box-shadow: black;
 }
 
 /* ------------------*/
@@ -208,7 +210,7 @@ body {
 }
 
 .box-shadow {
-  box-shadow: 0 0 15px 2px hsl(var(--clr-input));
+  box-shadow: 0 0 15px 2px hsl(var(--clr-box-shadow));
 }
 
 .no-border {
@@ -250,7 +252,8 @@ body {
 .dark-mode-toggle:hover {
   text-decoration: underline;
 }
-::placeholder {
-  background-color: hsl(var(--clr-elements));
-  color: hsl(var(--clr-input));
+
+.home-button {
+  margin-top: 70px;
+  margin-left: 40px;
 }

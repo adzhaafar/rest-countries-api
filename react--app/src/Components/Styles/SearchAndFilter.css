@@ -11,10 +11,6 @@
   align-items: flex-start;
 }
 
-.body {
-  -webkit-appearance: none;
-}
-
 /* make input div longer */
 .input {
   padding-inline-end: 5em;
@@ -23,10 +19,13 @@
 .drop-items {
   /* stop drop-items from affecting the height of the entire container */
   position: absolute;
-  /* push items down for a small gap*/
-  margin-top: 10px;
   /* make them longer */
   padding-inline-end: 5.5em;
+  /* hidden by default */
+  display: none;
+  z-index: 10;
+  /* content: 100%; */
+  align-content: stretch;
 }
 
 /* show dropdown items on hover */
@@ -35,13 +34,26 @@
 }
 
 /* change background color on hover of item */
-.drop-items p:hover {
-  background-color: #f1f1f1;
+.dropdown p:hover {
+  background-color: hsl(var(--clr-background));
+  /* background-clip: padding-box; */
 }
 
-/* fix icons, fix hovering, fix box size*/
-.remove-border {
-  border-color: transparent;
-  padding: 0;
-  border-image-width: 0;
+/* fix bug on the input box */
+input {
+  background-color: hsl(var(--clr-elements));
+  color: hsl(var(--clr-input));
+}
+
+::placeholder {
+  background-color: hsl(var(--clr-elements));
+  color: hsl(var(--clr-input));
+}
+
+.add-size {
+  padding-right: 1.492em;
+}
+
+.dropdown:hover .drop-button {
+  background-color: hsl(var(--clr-background));
 }

@@ -1,7 +1,7 @@
 @import "../../index.css";
 
 .main-container {
-  margin-top: 10em;
+  margin-top: 5em;
   gap: 100px;
 }
 
@@ -30,8 +30,9 @@
 
 .country-name {
   font-size: 2rem;
-  line-height: 2.5em;
+  line-height: 1.5em;
   margin-left: 75px;
+  margin-top: 1.5rem;
 }
 
 .border-button {

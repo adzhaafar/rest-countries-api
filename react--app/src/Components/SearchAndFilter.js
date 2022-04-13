@@ -13,18 +13,17 @@ export default function SearchAndFilter(props) {
     }
 
     function filterRegion(event) {
-        // props.changeRegion(event.target.__reactProps$huwmenlbyzm.children)
         props.changeRegion(event.target.textContent)
     }
 
     return (
         <div className="flex search-filter-container">    
-            <div className="input elements-color border-radius box-shadow no-border fw-light input-color cursor-pointer padding-around">
+            <div className="box-shadow input elements-color border-radius no-border fw-light input-color cursor-pointer padding-around">
                 <ion-icon name="search-outline"></ion-icon>
-                <input onClick={props.handleClick2} onChange={handleChange} className="text-color element-color remove-border no-border" placeholder="Search for a country..." type="text"></input>
+                <input onClick={props.handleClick2} onChange={handleChange} className="text-color element-color no-border" placeholder="Search for a country..." type="text"></input>
             </div>
             <div className="dropdown">
-                <button className="padding-around elements-color text-color no-border box-shadow border-radius cursor-pointer"><ion-icon className="" name="chevron-down-outline"></ion-icon> Filter by Region</button>
+                <button className="drop-button add-size padding-around elements-color text-color no-border box-shadow border-radius cursor-pointer"><ion-icon className="" name="chevron-down-outline"></ion-icon> Filter by Region</button>
                 <div onClick={props.handleClick} className="padding-around drop-items box-shadow elements-color text-color no-border border-radius cursor-pointer">
                     <p onClick={filterRegion}>Africa</p>
                     <p onClick={filterRegion}>Americas</p>
