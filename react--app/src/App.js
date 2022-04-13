@@ -6,14 +6,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
-  Link,
   Outlet,
-  useParams,
-  NavLink,
-  useNavigate,
-  useLocation,
 } from "react-router-dom";
+import "./darkmode.js"
 
 export default function App() {
 

@@ -28,6 +28,12 @@
   --gap-space: 0.5em;
 }
 
+/* .darkmode {
+  --clr-elements: 209 23% 22%;
+  --clr-background: 207 26% 17%;
+  --clr-lm-dm-elements: 0 0% 100%;
+} */
+
 /* ------------------*/
 /*       Resets      */
 /* ------------------*/
@@ -253,4 +259,16 @@ body {
 
 .line-space-big {
   line-height: 3;
+}
+
+/* #darkmode {
+  background-color: hsl(var(--clr-dm-background));
+  
+
+  background-color: hsl(var(--clr-dm-elements));
+
+} */
+
+.dark-mode-toggle:hover {
+  text-decoration: underline;
 }
