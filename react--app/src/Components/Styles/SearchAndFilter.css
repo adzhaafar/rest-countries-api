@@ -1,14 +1,20 @@
 @import "../../index.css";
 
 .search-filter-container {
+  /* give width */
+  width: 99%;
+  /* Center the actual container */
+  margin: 0 auto;
   /* push container down */
   margin-top: 30px;
-  /* horizontally center items to even out space */
+  /* center contents of the container */
   justify-content: center;
   /* push items apart */
-  gap: 58.5%;
+  gap: 10vh 60%;
   /* make items not stretch */
   align-items: flex-start;
+  /* wrap on smaller screen size */
+  flex-wrap: wrap;
 }
 
 /* make input div longer */

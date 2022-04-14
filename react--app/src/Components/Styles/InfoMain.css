@@ -43,3 +43,9 @@
   transform: scale(1.1);
   transition: transform ease-in-out 0.5s;
 }
+
+@media (max-width: 1170px) {
+  .main-container {
+    flex-direction: column;
+  }
+}

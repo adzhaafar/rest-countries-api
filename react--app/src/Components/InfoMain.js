@@ -37,9 +37,15 @@ export default function InfoMain(props) {
     const borders = (borderCountries).map(border => {
         return <BorderButtons key={border} name={border} />
     })
+
+    // only show 3 borders
+    if (borders.length > 4) {
+        borders.splice(3, borders.length - 3)
+    }
+
+    // set up an algorithm to click through 3 borders at a time
+
     
-
-
     return (
         <>
             <button className="home-button no-border padding-inline cursor-pointer border-radius box-shadow space-around-content elements-color input-color fs-small fw-medium letter-spacing" onClick={() => navigate('/')}>Home</button>
@@ -59,7 +65,7 @@ export default function InfoMain(props) {
 
                         <div>
                             <p className="fs-small fw-light"><span className="fs-medium fw-dark">Top Level Domain:  </span> {dataCountry.topLevelDomain}</p>
-                            <p className="fs-small fw-light"><span className="fs-medium fw-dark">Currencies:  </span> { dataCountry &&dataCountry.currencies ? dataCountry.currencies[0].name : null}</p>
+                            <p className="fs-small fw-light"><span className="fs-medium fw-dark">Currencies:  </span> { dataCountry && dataCountry.currencies ? dataCountry.currencies[0].name : null}</p>
                             <p className="fs-small fw-light"><span className="fs-medium fw-dark">Languages:  </span>{ dataCountry && dataCountry.languages ? dataCountry.languages[0].name : null}</p>
                         </div>
                     </div>

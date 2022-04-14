@@ -6,10 +6,13 @@
   justify-content: center;
   align-items: center;
   /* set height */
-  height: 80px;
+  min-height: 80px;
   /* pull them apart */
-  gap: 70%;
+  gap: 65vw;
 }
 
-/* fix text sliding off sides on small screen */
-/* rgb(224, 217, 217) */
+@media (max-width: 865px) {
+  .navbar {
+    gap: 30vw;
+  }
+}
