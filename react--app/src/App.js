@@ -16,7 +16,7 @@ export default function App() {
   <Router> 
       < Navbar /> 
       <Routes>
-        <Route path='/' exact element={<Home/>}/>
+        <Route path='/rest-countries-api' exact element={<Home/>}/>
         <Route path=':countryName' exact element={<CountryInfo />} />
       </Routes>
         <Outlet />
