@@ -37,7 +37,7 @@ The users are able to:
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://adzhaafar.github.io/rest-countries-api/)
+
 
 ## My process
 
@@ -61,7 +61,7 @@ The users are able to:
 
 - Styling grid, particularly making the grid-container dynamically render instead of the actual grid items. This made the css grid properties act very strangely because each child element acted as the parent container. To fix the issue I put container class in a static section tag and inside put child elements to render after api call.
 
-- Rendering information dynamically from the rest api, the reason for that was due to the key names not being named in the same way, so it threw an error returning undefined. I kept thinking the error was that react rendered components before api data returned, which is why a blank object wouldn't have properties and return undefined. This turned out not to be the issue but it led me onto a rabbit hole of react's lifecycle methods and class components and I learned pretty interesting stuff about older React to appreciate newer hooks.
+- Rendering information dynamically from the rest api, the reason for that was due to the key names not being named in the same way, so it threw an error returning undefined. I kept thinking the error was that react rendered components before api data returned, which is why a blank object wouldn't have properties and return undefined. This turned out not to be the issue but it led me to look up react's lifecycle methods and class components and I learned pretty interesting stuff about older React to appreciate newer hooks.
 
 ### Built with
 
